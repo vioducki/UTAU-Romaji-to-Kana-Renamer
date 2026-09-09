@@ -1,16 +1,16 @@
 # UTAU Romaji to Kana Renamer
 
-A small Windows Tkinter application that previews and batch-renames `.wav` files from romaji filenames to hiragana/kana filenames.
-
-Place your application icon in this folder as `icon.ico`. The icon should be an ICO file; PNG or JPG files need to be converted first.
+A small Windows application that previews and batch-renames `.wav` files from romaji filenames to hiragana/kana filenames! For people who are lazy like me!
+But now you don't have to manually rename all of your files one by one.
+I've only tried this with CV voicebanks but if you'd like to try this with VCV or CVVC then go ahead and you can contact me on Instagram @vioducki.art if it works or not.
 
 ## Features
 
-- Select a folder containing `.wav` files.
-- Preview the original names and proposed kana names side by side.
-- Batch rename the files.
-- Undo the most recent batch rename while the app is still open.
-- Uses only Python's standard library for the application itself.
+- Pick a folder containing `.wav` files.
+- Preview the original names and proposed kana names side by side before actually renaming them
+- Batch rename the files so you won't have to do it one by one
+- Undo the most recent batch rename while the app is still open in case you want to keep the romaji instead
+- Uses only Python's standard library for the application itself (because I kinda only know python and a little bit of html)
 
 ## Run from Python
 
@@ -23,11 +23,11 @@ Place your application icon in this folder as `icon.ico`. The icon should be an 
 python renamer.py
 ```
 
-Tkinter is included with the standard Windows Python installer.
+(Oh yeah, and Tkinter is included with the standard Windows Python installer)
 
-## Build a Windows executable
+## Build a Windows exe
 
-To make an `.exe` that can run without opening Python:
+To make an `.exe` that can run without opening Python you gotta do this...
 
 ```powershell
 python -m pip install pyinstaller
@@ -38,23 +38,6 @@ The finished executable will be placed in the `dist` folder.
 
 You can also run `build_windows.bat` after installing PyInstaller.
 
-## Publish on GitHub
+## About Undo
 
-1. Install [Git for Windows](https://git-scm.com/download/win) or [GitHub Desktop](https://desktop.github.com/).
-2. Create a new empty repository on GitHub.
-3. In PowerShell, open this project folder and run:
-
-```powershell
-git init
-git add renamer.py README.md .gitignore build_windows.bat
-git commit -m "Initial release"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-git push -u origin main
-```
-
-Replace the remote URL with your repository's URL. Do not commit personal folders, audio files, passwords, or generated build folders.
-
-## Important note about Undo
-
-Undo remembers the most recent rename operation only while the application remains open. It does not store a permanent undo history after the program closes.
+Undo remembers the most recent rename only while the app stays open. It doesn't store a permanent undo history after the program closes, so... yeah, be sure you're 100% sure you want to keep the changes before closing the app.
