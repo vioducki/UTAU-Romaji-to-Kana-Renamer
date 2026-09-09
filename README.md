@@ -13,30 +13,7 @@ I've only tried this with CV voicebanks but if you'd like to try this with VCV o
 - Uses only Python's standard library for the application itself (because I kinda only know python and a little bit of html)
 
 ## Run from Python
-
-1. Install Python 3.10 or newer from <https://www.python.org/downloads/>.
-2. During installation, enable **Add Python to PATH**.
-3. Open PowerShell in this project folder.
-4. Run:
-
-```powershell
-python renamer.py
-```
-
-(Oh yeah, and Tkinter is included with the standard Windows Python installer)
-
-## Build a Windows exe
-
-To make an `.exe` that can run without opening Python you gotta do this...
-
-```powershell
-python -m pip install pyinstaller
-pyinstaller --onefile --windowed --icon=icon.ico --add-data "icon.ico;." --name UTAU-Romaji-to-Kana-Renamer renamer.py
-```
-
-The finished exe file will be placed in the `dist` folder.
-
-You can also run `build_windows.bat` after installing PyInstaller.
+Yeah apparently you don't need to install Python! I thought you did but nope, everything is all packaged up! All you need to do is install the zip file in the Releases, unzip the file and open the `dist` folder and run the exe! Easy as pie! Wait, Pie reference?!?!?!!? PAItomo?!!
 
 ## About Undo
 
