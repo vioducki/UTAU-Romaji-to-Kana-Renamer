@@ -34,7 +34,7 @@ python -m pip install pyinstaller
 pyinstaller --onefile --windowed --icon=icon.ico --add-data "icon.ico;." --name UTAU-Romaji-to-Kana-Renamer renamer.py
 ```
 
-The finished executable will be placed in the `dist` folder.
+The finished exe file will be placed in the `dist` folder.
 
 You can also run `build_windows.bat` after installing PyInstaller.
 
